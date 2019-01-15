@@ -36,7 +36,7 @@ void setup() {
   OpenBackground.resize(width, height);
   begin.resize(width, height);
   Chungus.resize(width/16, height/16);
-  //Carrot.resize(width/64, height/32);
+  Carrot.resize(width/32, height/16);
   CHUNGX = width/2;
   CHUNGY = height/2;
   speed = (width+height/2)/200;
@@ -107,8 +107,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && CHUNGX + ChungusWidth >= CX+CWidth) {
-      if (CHUNGY <= CY && CHUNGY + ChungusHeight >= CY+CHeight) {
+    if (CHUNGX <= CX && CHUNGX + ChungusWidth >= CX + CWidth) {
+      if (CHUNGY <= CY && CHUNGY + ChungusHeight >= CY + CHeight) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
