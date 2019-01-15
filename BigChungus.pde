@@ -66,13 +66,13 @@ void draw() {
     }
     //image(intro, 0, 0, width, height);
     //intro.play();
-    println(intro.duration());
+    //println(intro.duration());
 
-    if (millis() >= pmillis + (intro.duration()*1090)) {
+    //if (millis() >= pmillis + (intro.duration()*1090)) {
       INTRO = false;
       START= true;
       println("end");
-    }
+    //}
   }
 
 
@@ -124,11 +124,11 @@ void draw() {
     CHUNGY = bounce;
   }
 }
-
+/*
 void movieEvent(Movie m) {
   m.read();
 }
-
+*/
 
 void keyPressed() {
   processMove(keyCode, true);
