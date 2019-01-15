@@ -26,7 +26,7 @@ void setup() {
   OpenBackground = loadImage("ChungusBackground2.PNG");
   begin = loadImage("begin.png");
   //intro = new Movie(this, "intro.mp4");
-  size(1280, 960);  
+  size(640, 480);  
   //fullScreen();
   ClosedBackground.resize(width, height);
   OpenBackground.resize(width, height);
