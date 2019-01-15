@@ -18,6 +18,10 @@ int bounce = 10;
 int CX = 400;
 int CY= 600;
 int Score = 0;
+int CWidth;
+int CHiegh;
+int ChungusWidth;
+int ChungusHeight;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -38,6 +42,10 @@ void setup() {
   speed = (width+height/2)/200;
   CX = width/3;
   CY= height/3;
+  CWidth = width/32;
+  CHeight = height/16;
+  ChungusWidth = width/16;
+  ChungusHieght = height/16;
   //frameRate(60);
   //  intro.play();
 }
@@ -100,8 +108,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && CHUNGX + Chungus.width >= CX+Carrot.width) {
-      if (CHUNGY <= CY && CHUNGY + Chungus.height >= CY+Carrot.height) {
+    if (CHUNGX <= CX && CHUNGX + ChungusWidth >= CX+CWidth) {
+      if (CHUNGY <= CY && CHUNGY + ChungusHeight >= CY+CHeight) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
@@ -112,14 +120,14 @@ void draw() {
 
 
 
-  if (CHUNGX > width-Chungus.width) {
-    CHUNGX = width-(Chungus.width+bounce);
+  if (CHUNGX > width-ChungusWidth) {
+    CHUNGX = width-(ChungusWidth+bounce);
   }
   if (CHUNGX < 0) {
     CHUNGX = bounce;
   }
-  if (CHUNGY > height-Chungus.height) {
-    CHUNGY = height-(Chungus.height+bounce);
+  if (CHUNGY > height-ChungusHeight) {
+    CHUNGY = height-(ChungusHeight+bounce);
   }
   if (CHUNGY < 0) {
     CHUNGY = bounce;
@@ -161,8 +169,8 @@ void makeChungusBigAgain() {
 }
 
 void moveCarrot() {
-  CX = round(random(0, width-Carrot.width));
-  CY = round(random(0, height-Carrot.height));
+  CX = round(random(0, width-CWidth));
+  CY = round(random(0, height-CHeight));
 }
 
 
