@@ -46,7 +46,8 @@ void setup() {
 void draw() {
   println("0");
   if (BEGIN) {
-    background(begin);
+    //background(begin);
+    image(begin, 0,0, width, height);
     textSize(70);
     textAlign(CENTER);
     fill(0);
@@ -80,7 +81,7 @@ void draw() {
 
   if (START) {
 
-    background(ClosedBackground);
+    image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY);
     textAlign(RIGHT);
     textSize(70);
