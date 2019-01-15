@@ -20,7 +20,7 @@ int CY= 600;
 int Score = 0;
 //Movie intro;
 void setup() {
-  size(screenWidth, screenHeight); 
+  size(screenWidth, screenHeight);
   Carrot = loadImage("carrot.png");
   Chungus = loadImage("ChungusTransparent.png");
   ClosedBackground = loadImage("ChungusBackground.PNG");
@@ -30,7 +30,7 @@ void setup() {
   //fullScreen();
   ClosedBackground.resize(width, height);
   OpenBackground.resize(width, height);
-  begin.resize(width, height); 
+  begin.resize(width, height);
   Chungus.resize(width/16, height/16);
   Carrot.resize(width/64, height/32);
   CHUNGX = width/2;
@@ -82,12 +82,12 @@ void draw() {
   if (START) {
 
     image(ClosedBackground, 0, 0, width, height);
-    image(Carrot, CX, CY);
+    image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX, CHUNGY);
+    image(Chungus, CHUNGX, CHUNGY, width/8, height/8);
     if (up) {
       CHUNGY-= speed;
     }
@@ -114,13 +114,13 @@ void draw() {
 
   if (CHUNGX > width-Chungus.width) {
     CHUNGX = width-(Chungus.width+bounce);
-  } 
+  }
   if (CHUNGX < 0) {
     CHUNGX = bounce;
   }
   if (CHUNGY > height-Chungus.height) {
     CHUNGY = height-(Chungus.height+bounce);
-  } 
+  }
   if (CHUNGY < 0) {
     CHUNGY = bounce;
   }
