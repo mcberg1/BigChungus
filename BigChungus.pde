@@ -168,8 +168,8 @@ void makeChungusBigAgain() {
 }
 
 void moveCarrot() {
-  CX = round(random(0, width-CWidth));
-  CY = round(random(0, height-CHeight));
+  CX = round(random(0, width-Carrot.width));
+  CY = round(random(0, height-Carrot.height));
 }
 
 
