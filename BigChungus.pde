@@ -19,7 +19,7 @@ int CX = 400;
 int CY= 600;
 int Score = 0;
 int CWidth;
-int CHiegh;
+int CHieght;
 int ChungusWidth;
 int ChungusHeight;
 //Movie intro;
