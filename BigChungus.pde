@@ -44,7 +44,7 @@ void setup() {
 
 
 void draw() {
-  println("0");
+  //println("0");
   if (BEGIN) {
     //background(begin);
     image(begin, 0,0, width, height);
