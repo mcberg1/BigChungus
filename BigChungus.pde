@@ -33,8 +33,8 @@ void setup() {
   ClosedBackground.resize(WIDTH, HEIGHT);
   OpenBackground.resize(WIDTH, HEIGHT);
   begin.resize(WIDTH, HEIGHT); 
-  Chungus.resize(WIDTH/8, HEIGHT/8);
-  Carrot.resize(WIDTH/32, HEIGHT/16);
+  Chungus.resize(WIDTH/16, HEIGHT/16);
+  Carrot.resize(WIDTH/64, HEIGHT/32);
   CHUNGX = WIDTH/2;
   CHUNGY = HEIGHT/2;
   speed = (WIDTH+HEIGHT/2)/200;
