@@ -1,4 +1,4 @@
-import processing.video.*;
+//import processing.video.*;
 PImage Carrot;
 PImage Chungus;
 PImage BigChungus;
@@ -18,14 +18,14 @@ int bounce = 10;
 int CX = 400;
 int CY= 600;
 int Score = 0;
-Movie intro;
+//Movie intro;
 void setup() {
   Carrot = loadImage("carrot.png");
   Chungus = loadImage("ChungusTransparent.png");
   ClosedBackground = loadImage("ChungusBackground.PNG");
   OpenBackground = loadImage("ChungusBackground2.PNG");
   begin = loadImage("begin.png");
-  intro = new Movie(this, "intro.mp4");
+  //intro = new Movie(this, "intro.mp4");
   size(1280, 960);  
   //fullScreen();
   ClosedBackground.resize(width, height);
@@ -64,7 +64,7 @@ void draw() {
       firstrun = true;
       pmillis = millis();
     }
-    image(intro, 0, 0, width, height);
+    //image(intro, 0, 0, width, height);
     //intro.play();
     println(intro.duration());
 
