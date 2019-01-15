@@ -18,6 +18,8 @@ int bounce = 10;
 int CX = 400;
 int CY= 600;
 int Score = 0;
+int WIDTH = 640;
+int HEIGHT = 480;
 //Movie intro;
 void setup() {
   size(640, 480); 
@@ -28,16 +30,16 @@ void setup() {
   begin = loadImage("begin.png");
   //intro = new Movie(this, "intro.mp4");
   //fullScreen();
-  ClosedBackground.resize(width, height);
-  OpenBackground.resize(width, height);
-  begin.resize(width, height); 
-  Chungus.resize(width/8, height/8);
-  Carrot.resize(width/32, height/16);
-  CHUNGX = width/2;
-  CHUNGY = height/2;
-  speed = (width+height/2)/200;
-  CX = width/3;
-  CY= height/3;
+  ClosedBackground.resize(WIDTH, HEIGHT);
+  OpenBackground.resize(WIDTH, HEIGHT);
+  begin.resize(WIDTH, HEIGHT); 
+  Chungus.resize(WIDTH/8, HEIGHT/8);
+  Carrot.resize(WIDTH/32, HEIGHT/16);
+  CHUNGX = WIDTH/2;
+  CHUNGY = HEIGHT/2;
+  speed = (WIDTH+HEIGHT/2)/200;
+  CX = WIDTH/3;
+  CY= HEIGHT/3;
   //frameRate(60);
   //  intro.play();
 }
@@ -47,11 +49,11 @@ void draw() {
   //println("0");
   if (BEGIN) {
     //background(begin);
-    image(begin, 0,0, width, height);
-    textSize(70);
+    image(begin, 0,0, WIDTH, HEIGHT);
+    textSize(60);
     textAlign(CENTER);
     fill(0);
-    text("PRESS SPACE TO START", width/2, ((height/4)*3));
+    text("PRESS SPACE TO START", WIDTH/2, ((HEIGHT/4)*3));
     if (keyPressed) {
       if (key == ' ') {
         BEGIN = false;
@@ -72,7 +74,7 @@ void draw() {
     //if (millis() >= pmillis + (intro.duration()*1090)) {
       INTRO = false;
       START= true;
-      println("end");
+      //println("end");
     //}
   }
 
@@ -81,12 +83,12 @@ void draw() {
 
   if (START) {
 
-    image(ClosedBackground, 0, 0, width, height);
+    image(ClosedBackground, 0, 0, WIDTH, HEIGHT);
     image(Carrot, CX, CY);
     textAlign(RIGHT);
     textSize(70);
     fill(255);
-      text(Score, width-100, 80);
+      text(Score, WIDTH-100, 80);
     image(Chungus, CHUNGX, CHUNGY);
     if (up) {
       CHUNGY-= speed;
@@ -112,14 +114,14 @@ void draw() {
 
 
 
-  if (CHUNGX > width-Chungus.width) {
-    CHUNGX = width-(Chungus.width+bounce);
+  if (CHUNGX > WIDTH-Chungus.width) {
+    CHUNGX = WIDTH-(Chungus.width+bounce);
   } 
   if (CHUNGX < 0) {
     CHUNGX = bounce;
   }
-  if (CHUNGY > height-Chungus.height) {
-    CHUNGY = height-(Chungus.height+bounce);
+  if (CHUNGY > HEIGHT-Chungus.height) {
+    CHUNGY = HEIGHT-(Chungus.height+bounce);
   } 
   if (CHUNGY < 0) {
     CHUNGY = bounce;
@@ -161,8 +163,8 @@ void makeChungusBigAgain() {
 }
 
 void moveCarrot() {
-  CX = round(random(0, width-Carrot.width));
-  CY = round(random(0, height-Carrot.height));
+  CX = round(random(0, WIDTH-Carrot.width));
+  CY = round(random(0, HEIGHT-Carrot.height));
 }
 
 
