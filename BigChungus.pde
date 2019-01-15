@@ -22,8 +22,8 @@ int Score = 0;
 void setup() {
   Carrot = loadImage("carrot.png");
   Chungus = loadImage("ChungusTransparent.png");
-  ClosedBackground = loadImage("ChungusBackground.png");
-  OpenBackground = loadImage("ChungusBackground2.png");
+  ClosedBackground = loadImage("ChungusBackground.PNG");
+  OpenBackground = loadImage("ChungusBackground2.PNG");
   begin = loadImage("begin.png");
   //intro = new Movie(this, "intro.mp4");
   size(1280, 960);  
