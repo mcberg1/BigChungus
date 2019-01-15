@@ -107,8 +107,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && CHUNGX + Chungus.width >= CX + Carrot.width) {
-      if (CHUNGY <= CY && CHUNGY + Chungus.height >= CY + Carrot.height) {
+    if (CHUNGX <= CX && (CHUNGX + Chungus.width) >= (CX + Carrot.width)) {
+      if (CHUNGY <= CY && (CHUNGY + Chungus.height) >= (CY + Carrot.height)) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
