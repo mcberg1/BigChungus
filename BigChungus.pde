@@ -20,14 +20,14 @@ int CY= 600;
 int Score = 0;
 //Movie intro;
 void setup() {
+  size(641, 480); 
   Carrot = loadImage("carrot.png");
   Chungus = loadImage("ChungusTransparent.png");
   ClosedBackground = loadImage("ChungusBackground.PNG");
   OpenBackground = loadImage("ChungusBackground2.PNG");
   begin = loadImage("begin.png");
   //intro = new Movie(this, "intro.mp4");
-  size(640, 480);  
-  //fullScreen();
+  fullScreen();
   ClosedBackground.resize(width, height);
   OpenBackground.resize(width, height);
   begin.resize(width, height); 
