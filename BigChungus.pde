@@ -88,7 +88,6 @@ void draw() {
 
 
   if (START) {
-
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
@@ -108,8 +107,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && CHUNGX + ChungusWidth >= CX+CWidth) {
-      if (CHUNGY <= CY && CHUNGY + ChungusHeight >= CY+CHeight) {
+    if (CHUNGX <= CX && CHUNGX + ChungusWidth >= CX+Carrot.width) {
+      if (CHUNGY <= CY && CHUNGY + ChungusHeight >= CY+Carrot.height) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
