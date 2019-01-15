@@ -18,8 +18,6 @@ int bounce = 10;
 int CX = 400;
 int CY= 600;
 int Score = 0;
-int width = 640;
-int height = 480;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight); 
