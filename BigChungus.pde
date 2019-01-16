@@ -133,6 +133,8 @@ void draw() {
   if (CHUNGY < 0) {
     CHUNGY = bounce;
   }
+  
+  drawVersion();
 }
 /*
 void movieEvent(Movie m) {
@@ -171,7 +173,7 @@ void makeChungusBigAgain() {
 
 void moveCarrot() {
   CX = round(random(0, width-Carrot.width));
-  CY = round(random(0, height-Carrot.height));
+  CY = round(random(0, height-Carrot.height))
 }
 
 
