@@ -5,9 +5,9 @@ PImage BigChungus;
 PImage ClosedBackground;
 PImage OpenBackground;
 PImage begin;
-boolean BEGIN = true;
+boolean BEGIN = false;
 boolean INTRO = false;
-boolean START = false;
+boolean START = true;
 boolean firstrun = false;
 boolean up, down, left, right;
 int pmillis= 0;
@@ -97,11 +97,11 @@ void draw() {
     fill(255);
       text(Score, width-100, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
-   if(mousePressed){
+   //if(mousePressed){
    CHUNGX = mouseX;
    CHUNGY = mouseY;
    
-   }
+  // }
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
