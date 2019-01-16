@@ -94,7 +94,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX, CHUNGY, width/8, height/8);
+    image(Chungus, CHUNGX+score, CHUNGY+score, width/8, height/8);
     if (up) {
       CHUNGY-= speed;
     }
@@ -107,8 +107,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && (CHUNGX + width/8) >= (CX + width/32)) {
-      if (CHUNGY <= CY && (CHUNGY + height/8) >= (CY + height/16)) {
+    if (CHUNGX <= CX && (CHUNGX + score + width/8) >= (CX + width/32)) {
+      if (CHUNGY <= CY && (CHUNGY + score + height/8) >= (CY + height/16)) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
@@ -119,7 +119,7 @@ void draw() {
 
 
 
-  if (CHUNGX > width-ChungusWidth) {
+  if (CHUNGX > width-(ChungusWidth)) {
     CHUNGX = width-(ChungusWidth+bounce);
   }
   if (CHUNGX < 0) {
