@@ -96,7 +96,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX + ((width/8)+((Score+1)*multiply)/4), CHUNGY + ((height/8)+((Score+1)*multiply)/4), (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+    image(Chungus, CHUNGX - ((width/8)+((Score+1)*multiply)/4), CHUNGY - ((height/8)+((Score+1)*multiply)/4), (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
    //if(mousePressed){
    CHUNGX = mouseX;
    CHUNGY = mouseY;
