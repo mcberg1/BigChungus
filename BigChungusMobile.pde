@@ -104,7 +104,7 @@ void draw() {
   // }
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
-        ellipse(CHUNGX, CHUNGY, 10, 10);
+        //ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
       }
