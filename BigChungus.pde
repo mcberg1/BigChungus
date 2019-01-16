@@ -17,7 +17,7 @@ int speed = 10;
 int bounce = 10;
 int CX = 400;
 int CY= 600;
-int Score = 0;
+int Score = 100;
 int CWidth;
 int CHieght;
 int ChungusWidth;
