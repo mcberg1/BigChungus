@@ -95,7 +95,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX+(Chungus.width/2), CHUNGY+(Chungus.height/2), (Chungus.width)+((Score+1)*multiply), (Chungus.height)+((Score+1)*multiply));
+    image(Chungus, CHUNGX+((width/8)+((Score+1)*multiply)/2), CHUNGY+((height/8)+((Score+1)*multiply)/2), (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
     if (up) {
       CHUNGY-= speed;
     }
