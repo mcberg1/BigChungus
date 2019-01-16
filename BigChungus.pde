@@ -17,7 +17,7 @@ int speed = 10;
 int bounce = 10;
 int CX = 400;
 int CY= 600;
-int Score = 0;
+int Score = 1;
 int CWidth;
 int CHieght;
 int ChungusWidth;
@@ -94,7 +94,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX+((score+1)*8), CHUNGY+((score+1)*8), width/8, height/8);
+    image(Chungus, CHUNGX, CHUNGY, (width/8)+((score+1)*8), (height/8)+((score+1)*8));
     if (up) {
       CHUNGY-= speed;
     }
