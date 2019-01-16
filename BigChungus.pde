@@ -36,7 +36,7 @@ void setup() {
   ClosedBackground.resize(width, height);
   OpenBackground.resize(width, height);
   begin.resize(width, height);
- // Chungus.resize(width/16, height/16);
+  //Chungus.resize(width/16, height/16);
   //Carrot.resize(width/32, height/16);
   CHUNGX = width/2;
   CHUNGY = height/2;
@@ -172,6 +172,3 @@ void moveCarrot() {
   CX = round(random(0, width-Carrot.width));
   CY = round(random(0, height-Carrot.height));
 }
-
-
-
