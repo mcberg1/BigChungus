@@ -179,7 +179,7 @@ void moveCarrot() {
 
 void drawVersion(){
 textSize(12);
-text("BigChungus v" + version", width - 100, height - 100);
+text("BigChungus v" + version, width - 100, height - 100);
 
 
 
