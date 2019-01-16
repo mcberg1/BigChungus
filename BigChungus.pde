@@ -23,7 +23,7 @@ int CHieght;
 int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
-float version = 3.1;
+float version = 3.2;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
