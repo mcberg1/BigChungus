@@ -23,6 +23,7 @@ int CHieght;
 int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
+float version = 3.1;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -171,4 +172,15 @@ void makeChungusBigAgain() {
 void moveCarrot() {
   CX = round(random(0, width-Carrot.width));
   CY = round(random(0, height-Carrot.height));
+}
+
+
+
+
+void drawVersion(){
+textSize(12);
+text("BigChungus v" + version", width - 100, height - 100);
+
+
+
 }
