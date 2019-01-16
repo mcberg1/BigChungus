@@ -45,8 +45,8 @@ void setup() {
   CY= height/3;
   CWidth = width/32;
   CHeight = height/16;
-  ChungusWidth = width/16;
-  ChungusHieght = height/16;
+  ChungusWidth = width/8;
+  ChungusHieght = height/8;
   //frameRate(60);
   //  intro.play();
 }
@@ -95,7 +95,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX+((width/8)+((Score+1)*multiply)/2), CHUNGY+((height/8)+((Score+1)*multiply)/2), (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+    image(Chungus, CHUNGX+((ChungusWidth)+((Score+1)*multiply)/2), CHUNGY+((ChungusHeight)+((Score+1)*multiply)/2), (ChungusWidth)+((Score+1)*multiply), (ChungusHeight)+((Score+1)*multiply));
     if (up) {
       CHUNGY-= speed;
     }
