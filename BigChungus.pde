@@ -22,6 +22,7 @@ int CWidth;
 int CHieght;
 int ChungusWidth;
 int ChungusHeight;
+int multiply = 2;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -94,7 +95,7 @@ void draw() {
     textSize(70);
     fill(255);
       text(Score, width-100, 80);
-    image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*16), (height/8)+((Score+1)*16));
+    image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
     if (up) {
       CHUNGY-= speed;
     }
@@ -107,8 +108,8 @@ void draw() {
     if (right) {
       CHUNGX+=speed;
     }
-    if (CHUNGX <= CX && (CHUNGX +((Score+1)*16) + width/8) >= (CX + width/32)) {
-      if (CHUNGY <= CY && (CHUNGY + ((Score+1)*16) + height/8) >= (CY + height/16)) {
+    if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
+      if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
         Score++;
