@@ -98,8 +98,8 @@ void draw() {
       text(Score, width-100, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
    //if(mousePressed){
-   CHUNGX = mouseX - ((width/8)+((Score+1)*multiply)/2);
-   CHUNGY = mouseY - ((height/8)+((Score+1)*multiply)/2);
+   CHUNGX = mouseX - ((width/8)+((Score+1)*multiply)/1);
+   CHUNGY = mouseY - ((height/8)+((Score+1)*multiply)/1);
    
   // }
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
