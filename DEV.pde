@@ -148,7 +148,7 @@ void draw() {
     timedRun = false;
     }
 
-    if((startmillis + (time * 1000)) >= millis()){
+    if((startmillis + (time * 1000)) >= millis() && !timedRun){
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
@@ -188,6 +188,14 @@ void draw() {
     
   
   }
+  else{
+   text(Score + " Carrots", width/2, height/2);
+   text((Score / time) + " Carrots per Second", width/2, (height/2)-80)
+   
+   
+    
+  }  
+    
   }
   
   
