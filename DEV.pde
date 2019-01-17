@@ -143,7 +143,7 @@ void draw() {
   if (START && gamemode == 2){
     image(ClosedBackground, 0, 0, width, height);
     startmillis = millis();
-    while(millis() < startmillis + (time *1000)){
+    while(millis() <= (startmillis + (time *1000))){
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
