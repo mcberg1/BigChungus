@@ -111,7 +111,7 @@ void draw() {
 
 
 
-  if (START) {
+  if (START && gamemode == 1) {
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
