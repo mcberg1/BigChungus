@@ -186,7 +186,7 @@ void draw() {
   }
   image(ClosedBackground, 0, 0, width, height);
   text(Score, width/2, height/2);
-  while(key != ' ' || keyCode != ENTER || keyCode != RETURN);
+  //while(key != ' ' || keyCode != ENTER || keyCode != RETURN);
   
   
 }
