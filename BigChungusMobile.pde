@@ -5,9 +5,9 @@ PImage BigChungus;
 PImage ClosedBackground;
 PImage OpenBackground;
 PImage begin;
-boolean BEGIN = false;
+boolean BEGIN = true;
 boolean INTRO = false;
-boolean START = true;
+boolean START = false;
 boolean firstrun = false;
 boolean up, down, left, right;
 int pmillis= 0;
@@ -63,7 +63,7 @@ void draw() {
     fill(0);
     text("TAP TO START", width/2, ((height/4)*3));
     
-      if (mousePressed) {
+      if (mouseX != pmouseX && mouseY != pmouseY) {
         BEGIN = false;
         INTRO = true;
       }
