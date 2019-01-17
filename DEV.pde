@@ -189,6 +189,8 @@ void draw() {
   
   }
   else{
+  textAlign(Center)
+  textSize(60);
    text(Score + " Carrots", width/2, height/2);
    text((Score / time) + " Carrots per Second", width/2, (height/2)-80)
    
