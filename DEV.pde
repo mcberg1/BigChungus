@@ -74,13 +74,15 @@ void draw() {
         BEGIN = false;
         INTRO = true;
       }
-      if(keyCode == UP){
+      if(keyCode == UP && pmillis + 100 <= millis()) {
       gamemode++;
+      pmillis = millis();
         if(gamemode > 2){
           gamemode = 1;
         }
       }
-      if(keyCode == DOWN){
+      if(keyCode == DOWN && pmillis + 100 <= millis()){
+       pmillis = millis();
        gamemode--;
        if(gamemode < 1){
          gamemode = 2;
