@@ -12,7 +12,7 @@ boolean firstrun = false;
 boolean timedRun = true;
 boolean up, down, left, right;
 int pmillis= 0;
-long startmillis = 0;
+int startmillis = 0;
 int CHUNGX = width/2;
 int CHUNGY = height/2;
 int speed = 10;
@@ -142,7 +142,7 @@ void draw() {
     }
   }
   if (START && gamemode == 2){
-    //image(ClosedBackground, 0, 0, width, height);
+    image(ClosedBackground, 0, 0, width, height);
     if(timedRun){
     startmillis = millis();
     timedRun = false;
