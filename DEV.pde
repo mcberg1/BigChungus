@@ -197,6 +197,7 @@ void draw() {
   if(key == ' '){
   BEGIN = true;
   START = false;
+  timedRun = true;
   }
    
    
