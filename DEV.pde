@@ -143,8 +143,7 @@ void draw() {
   if (START && gamemode == 2){
     image(ClosedBackground, 0, 0, width, height);
     startmillis = millis();
-    Score = 0;
-    while(millis() < startmillis + (time *1000)){
+    //while(millis() < startmillis + (time *1000)){
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
@@ -184,12 +183,11 @@ void draw() {
     
   
   }
-  image(ClosedBackground, 0, 0, width, height);
-  text(Score, width/2, height/2);
-  //while(key != ' ' || keyCode != ENTER || keyCode != RETURN);
   
   
-}
+  
+  
+
 
 
   if (CHUNGX > width-(ChungusWidth)) {
