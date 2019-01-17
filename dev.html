@@ -1,0 +1,67 @@
+<html>
+<head>
+ 
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132679488-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132679488-1');
+</script>
+
+<script>
+function is_touch_device() {
+  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+  var mq = function(query) {
+    return window.matchMedia(query).matches;
+  }
+
+  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+    return true;
+  }
+
+  // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+  // https://git.io/vznFH
+  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+  return mq(query);
+}
+
+if(is_touch_device()){
+window.location.href = "https://bob8898.github.io/BigChungus/mobile.html";
+
+}
+
+</script>
+ 
+ 
+ <style>
+body {
+  background-color: black;
+ color: white;
+}
+</style>
+<title>Big Chungus</title>
+<script src="processing.min.js"></script>
+</head>
+<body>
+ <canvas id="myCanvas" data-processing-sources="BigChungus.pde"></canvas>
+ <br>
+<h1>Big Chungus v3.2</h1>
+<p><strong>Whats new in version 3.2? </strong><br>
+  -Added google analytics<br>
+  -Removed Debug Circle<br>
+  -Modified hitbox to be more "normal"<br> 
+  -Added increasing chungus size, proportional to score<br>
+  -Added version in bottom right corner<br>
+  <strong>What to expect in the future</strong><br>
+  -Usage of external database for high scores, etc.<br>
+  -A more involved start menu with controls and customization<br>
+  -More of a goal to the game<br>
+  -Me completley abandoning this game once I get bored<br> 
+ </p>
+ </body>
+ 
+ 
+</html>
