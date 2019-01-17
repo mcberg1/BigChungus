@@ -63,10 +63,10 @@ void draw() {
     textSize(60);
     textAlign(CENTER);
     fill(0);
-    if(gamemode = 1){
+    if(gamemode == 1){
     text("--> Freeplay\n    Timed", width/2, ((height/4)*3));
     }
-    if(gamemode = 2){
+    if(gamemode == 2){
     text("    Freeplay\n--> Timed", width/2, ((height/4)*3));
     }
     if (keyPressed) {
