@@ -25,6 +25,7 @@ int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
 int gamemode = 1;
+int time = 30; //Ammount of time in seconds for time mode.
 float version = 3.2;
 //Movie intro;
 void setup() {
@@ -139,8 +140,56 @@ void draw() {
       }
     }
   }
-
-
+  if (START && gamemode == 2){
+    image(ClosedBackground, 0, 0, width, height);
+    startmillis = millis();
+    Score = 0;
+    while(millis() < startmillis + (time *1000)){
+    image(ClosedBackground, 0, 0, width, height);
+    image(Carrot, CX, CY, width/32, height/16);
+    textAlign(RIGHT);
+    textSize(70);
+    fill(255);
+    text(Score, width-100, 80);
+    textAlign(LEFT);
+    text((millis() - startmillis)/1000, 0, 80);
+    image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+    
+    
+    
+    if (up) {
+      CHUNGY-= speed;
+    }
+    if (down) {
+      CHUNGY+= speed;
+    }
+    if (left) {
+      CHUNGX-=speed;
+    }
+    if (right) {
+      CHUNGX+=speed;
+    }
+    
+    
+    
+    
+    
+    if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
+      if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
+        //ellipse(CHUNGX, CHUNGY, 10, 10);
+        moveCarrot();
+        Score++;
+      }
+    }
+    
+  
+  }
+  image(ClosedBackground, 0, 0, width, height);
+  text(Score, width/2, height/2);
+  while(key != ' ' || keyCode != ENTER || keyCode != RETURN);
+  
+  
+}
 
 
   if (CHUNGX > width-(ChungusWidth)) {
