@@ -70,7 +70,7 @@ void draw() {
     text("    Freeplay\n--> Timed", width/2, ((height/4)*3));
     }
     if (keyPressed) {
-      if (keyCode == ENTER || keyCode == RETURN) {
+      if (keyCode == ENTER || keyCode == RETURN || key == ' ') {
         BEGIN = false;
         INTRO = true;
       }
