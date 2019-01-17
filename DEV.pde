@@ -11,6 +11,7 @@ boolean START = false;
 boolean firstrun = false;
 boolean up, down, left, right;
 int pmillis= 0;
+long startmillis = 0;
 int CHUNGX = width/2;
 int CHUNGY = height/2;
 int speed = 10;
@@ -23,6 +24,7 @@ int CHieght;
 int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
+int gamemode = 1;
 float version = 3.2;
 //Movie intro;
 void setup() {
@@ -61,12 +63,30 @@ void draw() {
     textSize(60);
     textAlign(CENTER);
     fill(0);
-    text("PRESS SPACE TO START", width/2, ((height/4)*3));
+    if(gamemode = 1){
+    text("--> Freeplay\n    Timed", width/2, ((height/4)*3));
+    }
+    if(gamemode = 1){
+    text("    Freeplay\n--> Timed", width/2, ((height/4)*3));
+    }
     if (keyPressed) {
-      if (key == ' ') {
+      if (keyCode == ENTER || keyCode == RETURN) {
         BEGIN = false;
         INTRO = true;
       }
+      if(keyCode == UP){
+      gamemode++;
+        if(gamemode > 2){
+          gamemode = 1;
+        }
+      }
+      if(keyCode == DOWN){
+       gamemode--;
+       if(gamemode < 1){
+         gamemode = 2;
+       }
+      }
+      
     }
   }
 
