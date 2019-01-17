@@ -9,6 +9,7 @@ boolean BEGIN = true;
 boolean INTRO = false;
 boolean START = false;
 boolean firstrun = false;
+boolean timedRun = true;
 boolean up, down, left, right;
 int pmillis= 0;
 long startmillis = 0;
@@ -141,9 +142,13 @@ void draw() {
     }
   }
   if (START && gamemode == 2){
-    image(ClosedBackground, 0, 0, width, height);
+    //image(ClosedBackground, 0, 0, width, height);
+    if(timedRun){
     startmillis = millis();
-    while((startmillis + (time *1000)) >= millis()){
+    timedRun = false;
+    }
+
+    if(startmillis + (time * 1000)) >= millis()){
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
