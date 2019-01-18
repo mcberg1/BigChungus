@@ -193,13 +193,13 @@ void draw() {
   textSize(60);
   text(Score + " Carrots", width/2, (height/2)+80);
   text((round(((Score / time)*100))/100) + " Carrots per Second", width/2, (height/2)+160)
-  text("SPACE TO RETURN TO MENU", width/2, (height/2)+240);
-  if(key == ' '){
+  text("PRESS E TO RETURN TO MENU", width/2, (height/2)+240);
+  if(key == 'e' || key == 'E'){
   BEGIN = true;
   START = false;
   timedRun = true;
   Score = 0;
-  delay(50);
+  
   }
    
    
