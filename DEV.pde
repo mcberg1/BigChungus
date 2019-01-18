@@ -72,7 +72,7 @@ void draw() {
     text("    Freeplay\n--> Timed", width/2, ((height/4)*3));
     }
     if (keyPressed) {
-      if (keyCode == ENTER || keyCode == RETURN || key == ' ') {
+      if (key == ENTER || key == RETURN || key == ' ') {
         BEGIN = false;
         INTRO = true;
       }
@@ -114,6 +114,10 @@ void draw() {
 
 
   if (START && gamemode == 1) {
+    if(key == ESC){
+    START = false;
+    BEGIN = true;
+    }
     image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
