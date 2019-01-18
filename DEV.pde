@@ -198,6 +198,8 @@ void draw() {
   BEGIN = true;
   START = false;
   timedRun = true;
+  Score = 0;
+  delay(50);
   }
    
    
