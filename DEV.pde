@@ -160,7 +160,7 @@ void draw() {
     textAlign(RIGHT);
     textSize(70);
     fill(255);
-    text(Score, width-100, 80);
+    text(timedScore, width-100, 80);
     textAlign(LEFT);
     text((millis() - startmillis)/1000, 0, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
@@ -197,8 +197,8 @@ void draw() {
   else{
   textAlign(CENTER);
   textSize(60);
-  text(Score + " Carrots", width/2, (height/2)+80);
-  text((round(((Score / time)*100))/100) + " Carrots per Second", width/2, (height/2)+160)
+  text(timedScore + " Carrots", width/2, (height/2)+80);
+  text((round(((timedScore / time)*100))/100) + " Carrots per Second", width/2, (height/2)+160)
   text("PRESS E TO RETURN TO MENU", width/2, (height/2)+240);
   if(key == 'e' || key == 'E'){
   BEGIN = true;
