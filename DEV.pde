@@ -147,6 +147,10 @@ void draw() {
     }
   }
   if (START && gamemode == 2){
+  if(key == 'e' || key == 'E'){
+    START = false;
+    BEGIN = true;
+    }
     image(ClosedBackground, 0, 0, width, height);
     if(timedRun){
     timedScore = 0;
