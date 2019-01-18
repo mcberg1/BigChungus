@@ -114,7 +114,7 @@ void draw() {
 
 
   if (START && gamemode == 1) {
-    if(key == ESC || key == ESCAPE){
+    if(key == 'e' || key == 'E'){
     START = false;
     BEGIN = true;
     }
