@@ -20,6 +20,7 @@ int bounce = 10;
 int CX = 400;
 int CY= 600;
 int Score = 0;
+int timedScore = 0;
 int CWidth;
 int CHieght;
 int ChungusWidth;
@@ -148,6 +149,7 @@ void draw() {
   if (START && gamemode == 2){
     image(ClosedBackground, 0, 0, width, height);
     if(timedRun){
+    timedScore = 0;
     startmillis = millis();
     timedRun = false;
     }
@@ -186,7 +188,7 @@ void draw() {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         //ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
-        Score++;
+        timedScore++;
       }
     }
     
@@ -202,7 +204,7 @@ void draw() {
   BEGIN = true;
   START = false;
   timedRun = true;
-  Score = 0;
+  timedScore = 0;
   
   }
    
