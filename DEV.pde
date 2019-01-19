@@ -166,7 +166,7 @@ void draw() {
     fill(255);
     text(timedScore, width-100, 80);
     textAlign(LEFT);
-    text((time*1000)-((millis() - startmillis)/1000), 0, 80);
+    text((time)-((millis() - startmillis)/1000), 0, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
     
     
