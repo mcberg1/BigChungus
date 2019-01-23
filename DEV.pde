@@ -77,14 +77,14 @@ void draw() {
         BEGIN = false;
         INTRO = true;
       }
-      if(keyCode == UP && pmillis + 100 <= millis()) {
+      if(keyCode == UP && pmillis + 300 <= millis()) {
       gamemode++;
       pmillis = millis();
         if(gamemode > 2){
           gamemode = 1;
         }
       }
-      if(keyCode == DOWN && pmillis + 100 <= millis()){
+      if(keyCode == DOWN && pmillis + 300 <= millis()){
        pmillis = millis();
        gamemode--;
        if(gamemode < 1){
