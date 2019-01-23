@@ -28,7 +28,7 @@ int ChungusHeight;
 int multiply = 2;
 int gamemode = 1;
 int time = 30; //Ammount of time in seconds for time mode.
-float version = 3.2;
+float version = 3.4;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
