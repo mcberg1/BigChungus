@@ -12,7 +12,7 @@ boolean firstrun = false;
 boolean up, down, left, right;
 boolean timedRun = true;
 int pmillis= 0;
-int startmillis = 0;
+long startmillis = 0;
 int CHUNGX = width/2;
 int CHUNGY = height/2;
 int speed = 10;
@@ -128,7 +128,7 @@ void draw() {
   else{
   textAlign(CENTER);
   textSize(60);
-  text(timedSCore + "Carrots", width/2, (height/2)+80);
+  text(timedScore + "Carrots", width/2, (height/2)+80);
   text((round((timedScore / time) * 100)) /100) + "Carrots per Second", width/2, (height/2)+160);
   text("TAP TO RESTART", width/2, (height/2)+240);
   if (mouseX != pmouseX && mouseY != pmouseY) {
