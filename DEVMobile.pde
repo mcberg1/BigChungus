@@ -129,7 +129,7 @@ void draw() {
   textAlign(CENTER);
   textSize(60);
   text(timedScore + "Carrots", width/2, (height/2)+80);
-  text((round((timedScore / time) * 100)) /100) + "Carrots per Second", width/2, (height/2)+160);
+  text((round((timedScore / time) * 100) /100) + "Carrots per Second", width/2, (height/2)+160);
   text("TAP TO RESTART", width/2, (height/2)+240);
   if (mouseX != pmouseX && mouseY != pmouseY) {
         BEGIN = true;
