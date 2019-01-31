@@ -10,7 +10,9 @@ boolean INTRO = false;
 boolean START = false;
 boolean firstrun = false;
 boolean up, down, left, right;
+boolean timedRun = true;
 int pmillis= 0;
+int startmillis = 0;
 int CHUNGX = width/2;
 int CHUNGY = height/2;
 int speed = 10;
@@ -23,7 +25,9 @@ int CHieght;
 int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
+int time = 30;
 float version = 3.5;
+
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -91,11 +95,21 @@ void draw() {
 
   if (START) {
     image(ClosedBackground, 0, 0, width, height);
+    if(timedRun){
+    timedScore = 0;
+    startmillis = millis();
+    timedRun = false;
+    }
+    
+    if((startmillis + (time * 1000)) >= millis() && !timedRun){
+    image(ClosedBackground, 0, 0, width, height);
     image(Carrot, CX, CY, width/32, height/16);
     textAlign(RIGHT);
     textSize(70);
     fill(255);
-      text(Score, width-100, 80);
+    text(timedScore, width-100, 80);
+    textAlign(LEFT);
+    text((time)-((millis() - startmillis)/1000), 0, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
    //if(mousePressed){
    CHUNGX = mouseX - ((width/8)+((Score+1)*multiply)/2)/2;
@@ -106,9 +120,24 @@ void draw() {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         //ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
-        Score++;
+        timedScore++;
       }
     }
+  }
+  else{
+  textAlign(CENTER);
+  textSize(60);
+  text(timedSCore + "Carrots", width/2, (height/2)+80);
+  text((round((timedScore / time) * 100)) /100) + "Carrots per Second", width/2, (height/2)+160);
+  text("TAP TO RESTART", width/2, (height/2)+240);
+  if (mouseX != pmouseX && mouseY != pmouseY) {
+        BEGIN = true;
+        START = false;
+        timedRun = true;
+        timedScore = 0;
+  }
+  
+  }
   }
 
 
