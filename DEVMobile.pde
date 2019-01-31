@@ -26,6 +26,7 @@ int ChungusWidth;
 int ChungusHeight;
 int multiply = 2;
 int time = 30;
+int timedScore = 0;
 float version = 3.5;
 
 //Movie intro;
