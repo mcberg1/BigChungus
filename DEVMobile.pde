@@ -67,33 +67,13 @@ void draw() {
     textSize(60);
     textAlign(CENTER);
     fill(0);
-    if(gamemode == 1){
-    text("--> Freeplay\n    Timed", width/2, ((height/4)*3));
-    }
-    if(gamemode == 2){
-    text("    Freeplay\n--> Timed", width/2, ((height/4)*3));
-    }
-    if (keyPressed) {
-      if (key == ENTER || key == RETURN || key == ' ') {
+    text("TAP TO START", width/2, ((height/4)*3));
+    
+      if (mouseX != pmouseX && mouseY != pmouseY) {
         BEGIN = false;
         INTRO = true;
       }
-      if(keyCode == UP && pmillis + 300 <= millis()) {
-      gamemode++;
-      pmillis = millis();
-        if(gamemode > 2){
-          gamemode = 1;
-        }
-      }
-      if(keyCode == DOWN && pmillis + 300 <= millis()){
-       pmillis = millis();
-       gamemode--;
-       if(gamemode < 1){
-         gamemode = 2;
-       }
-      }
-      
-    }
+    
   }
   
   if (INTRO) {
