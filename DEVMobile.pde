@@ -156,7 +156,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY -= speed * Math.sin(gammaRadians);
+	CHUNGY -= speed map(gammaRadians, -90, 90, -1, 1);
 	
 }
 
@@ -183,5 +183,5 @@ text("Created by Matthew Berg", width-100, height-80);
 void fuckingMove(float alpha, float beta, float gamma){
 	alphaRadians = radians(alpha+90);
 	betaRadians = radians(beta);
-	gammaRadians = radians((gamma+90)*2	);
+	gammaRadians = radians(gamma);
 } 
