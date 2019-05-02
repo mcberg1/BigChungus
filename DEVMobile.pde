@@ -184,5 +184,5 @@ text("Created by Matthew Berg", width-100, height-80);
 void fuckingMove(float alpha, float beta, float gamma){
 	alphaRadians = radians(alpha+90);
 	betaRadians = radians(beta);
-	gammaRadians = radians(gamma);
+	gammaRadians = gamma;//lol its not actually radians get shrekt 
 } 
