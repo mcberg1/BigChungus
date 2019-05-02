@@ -107,7 +107,7 @@ void draw() {
     fill(255);
       text(Score, width-100, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
-	processMove(angleRadians, 1);
+	processMove(angleRadians, 10);
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         //ellipse(CHUNGX, CHUNGY, 10, 10);
