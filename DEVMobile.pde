@@ -157,7 +157,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY += speed * map(gammaRadians, -90, 90, -1, 1);
+	CHUNGY -= speed * map(gammaRadians, -90, 90, -1, 1);
 	
 }
 
