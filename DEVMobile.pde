@@ -108,7 +108,7 @@ void draw() {
     textSize(70);
     fill(255);
       //text(Score, width-100, 80);
-    text(map(gammaRadians, 0, 90, -1, 1), width-100, 80);
+    text(map(gammaRadians, 0, 180, -1, 1), width-100, 80);
 	image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
 	processMove(alphaRadians, 2);
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
@@ -157,7 +157,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY -= map(gammaRadians, 0, 90, -1, 1);
+	CHUNGY -= map(gammaRadians, 0, 180, -1, 1);
 	
 }
 
@@ -184,5 +184,5 @@ text("Created by Matthew Berg", width-100, height-80);
 void fuckingMove(float alpha, float beta, float gamma){
 	alphaRadians = radians(alpha+90);
 	betaRadians = radians(beta);
-	gammaRadians = gamma;//lol its not actually radians get shrekt 
+	gammaRadians = gamma+90;//lol its not actually radians get shrekt 
 } 
