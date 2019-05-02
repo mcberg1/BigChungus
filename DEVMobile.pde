@@ -107,8 +107,9 @@ void draw() {
     textAlign(RIGHT);
     textSize(70);
     fill(255);
-      text(Score, width-100, 80);
-    image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+      //text(Score, width-100, 80);
+    text(map(gammaRadians, -90, 90, -1, 1), width-100, 80);
+	image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
 	processMove(alphaRadians, 2);
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
@@ -156,7 +157,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY -= speed * map(gammaRadians, -90, 90, -1, 1);
+	CHUNGY += speed * map(gammaRadians, -90, 90, -1, 1);
 	
 }
 
