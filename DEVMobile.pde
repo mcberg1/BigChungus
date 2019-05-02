@@ -155,7 +155,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(turnangleRadians);
-	CHUNGY -= speed * Math.sin(vertangleRadians);
+	CHUNGY += speed * Math.sin(vertangleRadians);
 	
 }
 
