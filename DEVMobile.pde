@@ -153,8 +153,8 @@ void keyReleased() {
 }
 
 boolean processMove(float angle, int speed) {
-	CHUNGX += speed * Math.Cos(angle);
-	CHUNGY += speed * Math.Sin(angle);
+	CHUNGX += speed * Math.cos(angle);
+	CHUNGY += speed * Math.sin(angle);
 	
 }
 
@@ -163,7 +163,7 @@ void makeChungusBigAgain() {
 
 void moveCarrot() {
   CX = round(random(0, width-Carrot.width));
-  CY = round(random(0, height-Carrot.height))
+  CY = round(random(0, height-Carrot.height))	
 }
 
 
