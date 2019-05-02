@@ -31,6 +31,7 @@ int time = 30; //Ammount of time in seconds for time mode.
 float version = 3.4;
 float alphaRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
 float betaRadians = 0;
+float gammaRadians = 0;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -155,7 +156,7 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY -= speed * Math.sin(betaRadians);
+	CHUNGY -= speed * Math.sin(gammaRadians);
 	
 }
 
@@ -182,4 +183,5 @@ text("Created by Matthew Berg", width-100, height-80);
 void fuckingMove(float alpha, float beta, float gamma){
 	alphaRadians = radians(alpha+90);
 	betaRadians = radians(beta);
+	gammaRadians = radians(gamma);
 } 
