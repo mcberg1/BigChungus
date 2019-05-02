@@ -29,8 +29,7 @@ int multiply = 2;
 int gamemode = 1;
 int time = 30; //Ammount of time in seconds for time mode.
 float version = 3.4;
-float turnangleRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
-float vertangleRadians = 0;
+float angleRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -154,8 +153,8 @@ void keyReleased() {
 }
 
 boolean processMove(float angle, int speed) {
-	CHUNGX += speed * Math.cos(turnangleRadians);
-	CHUNGY -= speed * Math.sin(vertangleRadians);
+	CHUNGX += speed * Math.cos(angle);
+	CHUNGY -= speed * Math.sin(angle);
 	
 }
 
@@ -179,6 +178,5 @@ text("Created by Matthew Berg", width-100, height-80);
 }
 
 void fuckingMove(float alpha, float beta, float gamma){
-	turnangleRadians = radians(alpha+90);
-	vertangleRadians = radians(beta);
+	angleRadians = radians(alpha+90);
 } 
