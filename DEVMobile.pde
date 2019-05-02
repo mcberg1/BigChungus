@@ -29,7 +29,8 @@ int multiply = 2;
 int gamemode = 1;
 int time = 30; //Ammount of time in seconds for time mode.
 float version = 3.4;
-float angleRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
+float alphaRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
+float betaRadians = 0;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -107,7 +108,7 @@ void draw() {
     fill(255);
       text(Score, width-100, 80);
     image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
-	processMove(angleRadians, 2);
+	processMove(alphaRadians, 2);
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         //ellipse(CHUNGX, CHUNGY, 10, 10);
@@ -153,12 +154,13 @@ void keyReleased() {
 }
 
 boolean processMove(float angle, int speed) {
-	CHUNGX += speed * Math.cos(angle);
-	CHUNGY -= speed * Math.sin(angle);
+	CHUNGX += speed * Math.cos(alphaRadians);
+	CHUNGY -= speed * Math.sin(betaRadians);
 	
 }
 
 void makeChungusBigAgain() {
+
 }
 
 void moveCarrot() {
@@ -178,5 +180,6 @@ text("Created by Matthew Berg", width-100, height-80);
 }
 
 void fuckingMove(float alpha, float beta, float gamma){
-	angleRadians = radians(alpha+90);
+	alphaRadians = radians(alpha+90);
+	betaRadians = radians(beta);
 } 
