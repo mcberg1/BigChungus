@@ -178,5 +178,5 @@ text("Created by Matthew Berg", width-100, height-80);
 }
 
 void fuckingMove(float alpha, float beta, float gamma){
-	angleRadians = radians(alpha);
+	angleRadians = radians(alpha+90);
 } 
