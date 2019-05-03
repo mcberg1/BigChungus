@@ -36,6 +36,7 @@ int halfWidth = 0;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
+  halfWidth = width/2;
   Carrot = loadImage("carrot.png");
   Chungus = loadImage("ChungusTransparent.png");
   ClosedBackground = loadImage("ChungusBackground.PNG");
@@ -57,6 +58,7 @@ void setup() {
   CHeight = height/16;
   ChungusWidth = halfWidth/8;
   ChungusHieght = height/8;
+  
   //frameRate(60);
   //  intro.play();
 }
