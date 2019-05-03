@@ -54,6 +54,7 @@ body {
    
 
  function handleOrientation(event) {
+	document.getElementById('processing').style.width = '50%';
 	var pjs = Processing.getInstanceById("processing");
 
   var x = event.beta;  // In degree in the range [-180,180]
