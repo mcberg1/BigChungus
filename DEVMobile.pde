@@ -69,6 +69,7 @@ void draw() {
   if (BEGIN) {
     //background(begin);
     image(begin, 0,0, halfWidth, height);
+    image(begin, halfWidth,0, halfWidth, height);
     textSize(60);
     textAlign(CENTER);
     fill(0);
@@ -106,10 +107,13 @@ void draw() {
     BEGIN = true;
     }
     image(ClosedBackground, 0, 0, halfWidth, height);
+    image(ClosedBackground, halfWidth, 0, halfWidth, height);
     image(Carrot, CX, CY, halfWidth/32, height/16);
+    image(Carrot, halfWidth+CX, CY, halfWidth/32, height/16);
     textAlign(RIGHT);
     textSize(70);
     fill(255);
+    text(Score, halfWidth-100, 80);
     text(Score, halfWidth-100, 80);
     //text(map(gammaRadians, 0, 180, -1, 1), halfWidth-100, 80);
 	image(Chungus, CHUNGX, CHUNGY, (halfWidth/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
