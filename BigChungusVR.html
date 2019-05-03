@@ -9,6 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-132679488-1');
+
 </script>
 
 
@@ -23,7 +24,8 @@ body {
 <title>Big Chungus</title>
 <script src="processing.min.js"></script>
 </head>
-<body>
+<body onload="setTimeout(myFunction, 3000);">
+
  
  <h1>Big Chungus VR! Use Google Carboard!</h1>
   <!-- <canvas id="mysketch3" data-processing-sources="mysketch3.pde"></canvas> -->
@@ -51,10 +53,16 @@ body {
  </body>
  <script>
 
-   
+   function resize(){
+	document.getElementById('processing').style.width = '100%';
+	document.getElementById('processing').style.height = '100%';s
+
+
+}
+
 
  function handleOrientation(event) {
-	document.getElementById('processing').style.width = '50%';
+	
 	var pjs = Processing.getInstanceById("processing");
 
   var x = event.beta;  // In degree in the range [-180,180]
