@@ -74,7 +74,7 @@ void draw() {
     textAlign(CENTER);
     fill(0);
     text("TAP TO START", halfWidth/2, ((height/4)*3));
-    text("TAP TO START", halfWidth/2, ((height/4)*3));
+    text("TAP TO START", width/2, ((height/4)*3));
     
       if (mouseX != pmouseX && mouseY != pmouseY) {
         BEGIN = false;
