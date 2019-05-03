@@ -13,7 +13,7 @@ boolean timedRun = true;
 boolean up, down, left, right;
 int pmillis= 0;
 int startmillis = 0;
-float CHUNGX = width/2;
+float CHUNGX = halfWidth/2;
 float CHUNGY = height/2;
 int speed = 10;
 int bounce = 10;
@@ -32,6 +32,7 @@ float version = 3.4;
 float alphaRadians = 0;//Alpha from js device orientation goes 0-360 degrees. 
 float betaRadians = 0;
 float gammaRadians = 0;
+int halfWidth = 0;
 //Movie intro;
 void setup() {
   size(screenWidth, screenHeight);
@@ -42,19 +43,19 @@ void setup() {
   begin = loadImage("begin.png");
   //intro = new Movie(this, "intro.mp4");
   //fullScreen();
-  ClosedBackground.resize(width, height);
-  OpenBackground.resize(width, height);
-  begin.resize(width, height);
+  ClosedBackground.resize(halfWidth, height);
+  OpenBackground.resize(halfWidth, height);
+  begin.resize(halfWidth, height);
   //Chungus.resize(width/16, height/16);
   //Carrot.resize(width/32, height/16);
-  CHUNGX = width/2;
+  CHUNGX = halfWidth/2;
   CHUNGY = height/2;
-  speed = (width+height/2)/200;
-  CX = width/3;
+  speed = (halfWidth+height/2)/200;
+  CX = halfWidth/3;
   CY= height/3;
-  CWidth = width/32;
+  CWidth = halfWidth/32;
   CHeight = height/16;
-  ChungusWidth = width/8;
+  ChungusWidth = halfWidth/8;
   ChungusHieght = height/8;
   //frameRate(60);
   //  intro.play();
@@ -65,11 +66,11 @@ void draw() {
   //println("0");
   if (BEGIN) {
     //background(begin);
-    image(begin, 0,0, width, height);
+    image(begin, 0,0, halfWidth, height);
     textSize(60);
     textAlign(CENTER);
     fill(0);
-    text("TAP TO START", width/2, ((height/4)*3));
+    text("TAP TO START", halfWidth/2, ((height/4)*3));
     
       if (mouseX != pmouseX && mouseY != pmouseY) {
         BEGIN = false;
@@ -102,16 +103,16 @@ void draw() {
     START = false;
     BEGIN = true;
     }
-    image(ClosedBackground, 0, 0, width, height);
-    image(Carrot, CX, CY, width/32, height/16);
+    image(ClosedBackground, 0, 0, halfWidth, height);
+    image(Carrot, CX, CY, halfWidth/32, height/16);
     textAlign(RIGHT);
     textSize(70);
     fill(255);
-      //text(Score, width-100, 80);
-    text(map(gammaRadians, 0, 180, -1, 1), width-100, 80);
-	image(Chungus, CHUNGX, CHUNGY, (width/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+    text(Score, halfWidth-100, 80);
+    //text(map(gammaRadians, 0, 180, -1, 1), halfWidth-100, 80);
+	image(Chungus, CHUNGX, CHUNGY, (halfWidth/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
 	processMove(alphaRadians, 2);
-    if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + width/8) >= (CX + width/32)) {
+    if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + halfWidth/8) >= (CX + halfWidth/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
         //ellipse(CHUNGX, CHUNGY, 10, 10);
         moveCarrot();
@@ -127,8 +128,8 @@ void draw() {
 
 
 
-  if (CHUNGX > width-(ChungusWidth)) {
-    CHUNGX = width-(ChungusWidth+bounce);
+  if (CHUNGX > halfWidth-(ChungusWidth)) {
+    CHUNGX = halfWidth-(ChungusWidth+bounce);
   }
   if (CHUNGX < 0) {
     CHUNGX = bounce;
@@ -166,7 +167,7 @@ void makeChungusBigAgain() {
 }
 
 void moveCarrot() {
-  CX = round(random(0, width-Carrot.width));
+  CX = round(random(0, halfWidth-Carrot.width));
   CY = round(random(0, height-Carrot.height))	
 }
 
@@ -176,8 +177,8 @@ void moveCarrot() {
 void drawVersion(){
 textSize(12);
 textAlign(RIGHT);
-text("BigChungus v" + version, width - 100, height - 100);
-text("Created by Matthew Berg", width-100, height-80);
+text("BigChungus v" + version, halfWidth - 100, height - 100);
+text("Created by Matthew Berg", halfWidth-100, height-80);
 
 }
 
