@@ -118,6 +118,7 @@ void draw() {
     text(Score, width-100, 80);
     //text(map(gammaRadians, 0, 180, -1, 1), halfWidth-100, 80);
 	image(Chungus, CHUNGX, CHUNGY, (halfWidth/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
+	image(Chungus, CHUNGX+halfWidth, CHUNGY, (halfWidth/8)+((Score+1)*multiply), (height/8)+((Score+1)*multiply));
 	processMove(alphaRadians, 2);
     if (CHUNGX <= CX && (CHUNGX +((Score+1)*multiply) + halfWidth/8) >= (CX + halfWidth/32)) {
       if (CHUNGY <= CY && (CHUNGY + ((Score+1)*multiply) + height/8) >= (CY + height/16)) {
@@ -185,7 +186,9 @@ void drawVersion(){
 textSize(12);
 textAlign(RIGHT);
 text("BigChungus v" + version, halfWidth - 100, height - 100);
+text("BigChungus v" + version, width - 100, height - 100);
 text("Created by Matthew Berg", halfWidth-100, height-80);
+text("Created by Matthew Berg", width-100, height-80);
 
 }
 
