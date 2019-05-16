@@ -4,7 +4,7 @@ PImage Chungus;
 PImage BigChungus;
 PImage ClosedBackground;
 PImage OpenBackground;
-PImage begin;
+PImage begin;  
 boolean BEGIN = true;
 boolean INTRO = false;
 boolean START = false;
