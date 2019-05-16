@@ -166,8 +166,8 @@ void keyReleased() {
 
 boolean processMove(float angle, int speed) {
 	CHUNGX += speed * Math.cos(alphaRadians);
-	CHUNGY -= speed * Math.sin(alphaRadians);
-	
+	//CHUNGY -= speed * Math.sin(alphaRadians);//Try to add gamma axis i think
+	CHUNGY -= gammaRadians / 10; //Lol not acutally radians get shrekttt	
 }
 
 void makeChungusBigAgain() {
