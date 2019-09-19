@@ -53,7 +53,7 @@ void setup() {
   CHeight = height/16;
   ChungusWidth = width/8;
   ChungusHieght = height/8;
-  //frameRate(60);
+  frameRate(600000);
   //  intro.play();
 }
 
