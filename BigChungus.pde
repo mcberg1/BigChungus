@@ -46,14 +46,14 @@ void setup() {
   //Carrot.resize(width/32, height/16);
   CHUNGX = width/2;
   CHUNGY = height/2;
-  speed = (width+height/2)/200;
+  speed = (width+height/2)/50;
   CX = width/3;
   CY= height/3;
   CWidth = width/32;
   CHeight = height/16;
   ChungusWidth = width/8;
   ChungusHieght = height/8;
-  frameRate(600000);
+  frameRate(60);
   //  intro.play();
 }
 
